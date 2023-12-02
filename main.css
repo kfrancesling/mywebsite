@@ -1,0 +1,68 @@
+@font-face {
+  font-family:thebirds;
+  src: url(THEBIRDS.TTF);
+}
+
+
+html {
+    background: pink;
+    background-image: url(Blue_watercolor_texture_with_dots.jpg);
+    cursor: url(https://cur.cursors-4u.net/nature/nat-3/nat212.cur), auto !important;
+}
+
+h1 {
+     font-family: thebirds;
+}
+
+body {
+    
+}
+ul {
+  list-style-type: none; 
+}
+p {
+  height: 200px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+
+.intro {
+    text-align: center;
+}
+
+img {
+  height: 150px;
+  position: absolute;
+  left: 0;
+  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+  z-index: 0;
+}
+
+img:hover {
+  transform: scale(3);
+  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+  box-shadow: 3px 4px 10px #0006;
+  z-index: 999;
+}
+
+/* 5 images */
+img:nth-last-child(5):first-child {
+  offset-distance: 0%;
+}
+img:nth-last-child(4):nth-child(2) {
+  offset-distance: 25%;
+}
+img:nth-last-child(3):nth-child(3) {
+  offset-distance: 51%;
+}
+img:nth-last-child(2):nth-child(4) {
+  offset-distance: 75%;
+}
+img:last-child:nth-child(5) {
+  offset-distance: 100%;
+}
+
